@@ -25,6 +25,13 @@ builder.Services.AddCors( options =>
 //使用Serilog讀取配置文件(appsettings.json)來進行記錄並輸出到控制台
 builder.Host.UseSerilog((ctx, lc) => lc.WriteTo.Console().ReadFrom.Configuration(ctx.Configuration));
 
+//註冊AutoMapper
+builder.Services.AddAutoMapper(typeof(MapperConfig));
+
+//register GenericRepository<T> with type IGenericRepository<T>
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+//register CountryRepository to container with type: ICountryRepository
+builder.Services.AddScoped<ICountryRepository, CountryRepository>();
 
 
 var app = builder.Build();

@@ -12,3 +12,11 @@ global using System.Linq;
 global using System.Threading.Tasks;
 global using Microsoft.AspNetCore.Http;
 global using Microsoft.AspNetCore.Mvc;
+global using HotelListening.API.Models.Country;
+global using HotelListening.API.Models.Hotel;
+global using System.ComponentModel.DataAnnotations;
+global using HotelListening.API.Configurations;
+global using HotelListening.API.Contracts;
+global using HotelListening.API.Repository;
+global using AutoMapper;
+
