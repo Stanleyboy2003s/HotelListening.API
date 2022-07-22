@@ -1,6 +1,6 @@
 ﻿namespace HotelListening.API.Models.Hotel;
 
-public class HotelDto :HotelDtoBase
+public class GetHotelDto:HotelDtoBase
 {
     public long Id { get; set; }
 }

@@ -32,6 +32,8 @@ builder.Services.AddAutoMapper(typeof(MapperConfig));
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 //register CountryRepository to container with type: ICountryRepository
 builder.Services.AddScoped<ICountryRepository, CountryRepository>();
+//register HotelRepository to container with type: IHotelRepository
+builder.Services.AddScoped<IHotelRepository, HotelRepository>();
 
 
 var app = builder.Build();
